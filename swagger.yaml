@@ -1,0 +1,12 @@
+swagger: '2.0'
+info:
+  description: >-
+   This Service is used to catch connection-leak in code.
+  version: 0.1.0
+  title: Connection-leak in code.
+  contact:
+    email: devops@digite.com
+  license:
+    name: DigiteDevOps1.0
+    url: 'http://www.digite.com'
+host: localhost:5006
