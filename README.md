@@ -3,12 +3,12 @@
 This microservice is plugin for SwiftOps bot engine. This plugin collect information 
 of connection leak data from [mongo](https://www.mongodb.com/) db and return it to bot engine in [json](https://www.json.org/) format.
 
-## Pre-Requisite:
+## Pre-Requisite
 
-*  Docker should be installed on your machine. Refer [Install Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04) documentation.
+  *  Docker should be installed on your machine. Refer [Install Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04) documentation.
 
-*  Change property file  present in this repository 
-  db_conn.ini to change db details
+  * Change property file  present in this repository 
+    db_conn.ini to change db details
 
 ## Installation
 ### Checkout Repository
@@ -17,8 +17,6 @@ git clone https://github.com/swiftops/connectionleak-fileter.git
 ```
 ### 1. Deploy inside Docker
 ---
-
- 
 
 ## Steps to start microservice
 Once you  done with pre-requisite exeute below command to start connection_leak_filter microservice
@@ -29,18 +27,18 @@ docker run -p 5004:5004 --name ms-connleakfileterservice -d <image-name>
 ```
 ### 2. On Commit Auto-deploy on specific server
 ---
-*  You need to configure Gitlab Runner to execute Gitlab CI/CD Pipeline. See [Gitlab Config](https://docs.gitlab.com/runner/install)
+  * You need to configure Gitlab Runner to execute Gitlab CI/CD Pipeline. See [Gitlab Config](https://docs.gitlab.com/runner/install)
 As soon as you configure runner auto deployment will start as you commited the code in repository.
 refer .gitlab-ci.yml file.
 
 ### 3. Deploy on local environment
 ---
 ## Pre-Requisite
-*  Python 3.6.0
+  * Python 3.6.0
 
-*  MongoDB
+  * MongoDB
 
-*  Change property file  present in this repository
+  * Change property file  present in this repository
   db_conn.ini to change db connection details.
 
 ### Create Virtual Environment
@@ -98,12 +96,12 @@ This service search in mongo db for release and build given in request query and
 
  returns the following status codes in API:
 
-| Status Code | Description      |
-| :--- | :---                    |
-| 200  | `OK`                    |
-| 400  | `BAD REQUEST`           |
-| 404  | `NOT FOUND`             |
-| 500  | `INTERNAL SERVER ERROR` |
+| Status Code | Description             |
+| :---        | :---                    |
+| 200         | `OK`                    |
+| 400         | `BAD REQUEST`           |
+| 404         | `NOT FOUND`             |
+| 500         | `INTERNAL SERVER ERROR` |
 
 ### ConnectionLeak output on slack
 ![Scheme](img/connleak.JPG)
@@ -115,16 +113,15 @@ This service search in mongo db for release and build given in request query and
 [Flask](http://flask.pocoo.org/docs/1.0/quickstart/) is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries.It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself.
 
 ### Gunicorn
-The [Gunicorn](http://docs.gunicorn.org/en/stable/configure.html) "Green Unicorn" (pronounced gee-unicorn)[2] is a Python Web Server Gateway Interface (WSGI) HTTP server. 
+The [Gunicorn](http://docs.gunicorn.org/en/stable/configure.html) "Green Unicorn" (pronounced gee-unicorn) is a Python Web Server Gateway Interface (WSGI) HTTP server. 
 
 ### Features
-*  Natively supports WSGI, web2py, Django and Paster
-*  Automatic worker process management
-*  Simple Python configuration
-*  Multiple worker configurations
-*  Various server hooks for extensibility
-*  Compatible with Python 2.6+ and Python 3.2+
+  * Natively supports WSGI, web2py, Django and Paster
+  * Automatic worker process management
+  * Simple Python configuration
+  * Multiple worker configurations
+  * Various server hooks for extensibility
+  * Compatible with Python 2.6+ and Python 3.2+
 
 ### Docker 
 Docker is Container platform,more deails about [Docker](https://www.docker.com/get-started)
-
