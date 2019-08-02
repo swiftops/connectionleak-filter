@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, request
 from com.swiftops.connleak import ConnleakFilterServices as ConFilter
 import connexion
 import json

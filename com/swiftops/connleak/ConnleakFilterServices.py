@@ -1,5 +1,4 @@
 from pymongo import MongoClient
-from flask import jsonify
 import json
 import configparser
 
