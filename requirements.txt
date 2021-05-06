@@ -1,5 +1,5 @@
 flask
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 connexion
 configparser
 gunicorn
